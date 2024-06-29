@@ -48,8 +48,11 @@ function playGame(){
 		const humanSelection = getHumanChoice();
 		const computerSelection = getComputerChoice(); 
 		console.log(playRound(humanSelection, computerSelection));
+        console.log("Your Selection: " + humanSelection);
+        console.log("Computer Selection: " + computerSelection);
 		console.log("You: " + humanScore);
 		console.log("Computer: " + computerScore);
+        
 	}
 	if (humanScore > computerScore){
 		console.log("You Won the Game!");
