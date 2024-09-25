@@ -3,9 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <title>Rock Paper Scissors Game - First to 3 Wins</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .game-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #rock { background-color: #ff6b6b; }
+        #paper { background-color: #4ecdc4; }
+        #scissors { background-color: #45b7d1; }
+        #reset { 
+            background-color: #feca57; 
+            margin-top: 20px;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        #score {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        #lastRoundResult {
+            font-size: 18px;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            min-height: 50px;
+        }
+    </style>
 </head>
 <body>
+    <div class="game-container">
+        <h1>Rock Paper Scissors</h1>
+        <p class="subtitle">First to 3 Wins</p>
+        <div id="score">You: 0 | Computer: 0</div>
+        <div class="buttons">
+            <button id="rock">✊ Rock</button>
+            <button id="paper">✋ Paper</button>
+            <button id="scissors">✌️ Scissors</button>
+        </div>
+        <div id="lastRoundResult">Choose rock, paper, or scissors to start the game!</div>
+        <button id="reset">Reset Game</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
